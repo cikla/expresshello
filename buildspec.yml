@@ -11,6 +11,6 @@ phases:
   post_build:
     commands:
       - docker push 613536206275.dkr.ecr.eu-west-1.amazonaws.com/expresshello:latest
-      - printf '[{"name":express-task,"imageUri":"%s"}]' 613536206275.dkr.ecr.eu-west-1.amazonaws.com/expresshello:latest > imagedefinitions.json
+      - printf '[{"name":"express-task","imageUri":"%s"}]' 613536206275.dkr.ecr.eu-west-1.amazonaws.com/expresshello:latest > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
